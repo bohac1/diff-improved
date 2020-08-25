@@ -1,0 +1,25 @@
+./program <file-1> <file-2> [flags]
+flags:
+    --out=<outputFile>
+        outputs to the file instead of stdout
+    --format=<format>
+        sets output to be text in provided format
+            formats: 
+                hex - hexadecimal printing
+                oct - octal format
+                dec - decimal format
+    --force=bin
+        forces binary comparison of provided files
+    --image-mode=<mode>
+        sets mode for image processing
+            modes:
+                sub - substracts colors from second image with the colors from the first one
+                avg - averages colors of both images to one
+    --depth=<number>
+        sets depth for recursion in folder comparison (-1 for recursion without limit)
+    --ignore-hidden
+        ignores hidden files and folders
+    --structure-only
+        folder structure comparison without files
+    --ignore-empty-lines
+        ignores empty lines in text files

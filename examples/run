@@ -1,0 +1,23 @@
+# binnary file diffs
+./bohacmi6 ./examples/bin/bin1A.bin ./examples/bin/bin1B.bin --out=./examples/out/bin1.bin
+./bohacmi6 ./examples/bin/bin1A.bin ./examples/bin/bin1B.bin --format=hex
+
+# image diffs
+./bohacmi6 ./examples/images/a.bmp ./examples/images/b.bmp --out=./examples/out/c.bmp
+./bohacmi6 ./examples/images/a.bmp ./examples/images/b.bmp --out=./examples/out/c.bmp --image-mode=avg
+./bohacmi6 ./examples/images/diagonal24A.bmp ./examples/images/diagonal24B.bmp --out=./examples/out/diagonal24C.bmp
+./bohacmi6 ./examples/images/diagonal24A.bmp ./examples/images/diagonal24B.bmp --out=./examples/out/diagonal24CAVG.bmp --image-mode=avg
+./bohacmi6 ./examples/images/diagonal32A.bmp ./examples/images/diagonal32B.bmp --out=./examples/out/diagonal32C.bmp
+./bohacmi6 ./examples/images/diagonal32A.bmp ./examples/images/diagonal32B.bmp --out=./examples/out/diagonal32CAVG.bmp --image-mode=avg
+
+# text files
+./bohacmi6 ./examples/txts/test1A.txt ./examples/txts/test1B.txt --out=./examples/out/test1C.txt
+./bohacmi6 ./examples/txts/test2A.txt ./examples/txts/test2B.txt --out=./examples/out/test2C.txt
+./bohacmi6 ./examples/txts/test1A.txt ./examples/txts/test1B.txt --out=./examples/out/test1Ctxt2bin.bin --force=bin
+./bohacmi6 ./examples/txts/test3A.txt ./examples/txts/test3B.txt --out=./examples/out/test3C.txt
+./bohacmi6 ./examples/txts/test3A.txt ./examples/txts/test3B.txt --out=./examples/out/test3C_ignore_empty.txt --ignore-empty-lines
+
+# folders
+./bohacmi6 ./examples/folders/A ./examples/folders/B
+./bohacmi6 ./examples/folders/A ./examples/folders/B --structure-only
+./bohacmi6 ./examples/folders/B ./examples/folders/A --depth=1 --force=bin --out=./examples/out/folderTest2.txt --format=oct --ignore-hidden
